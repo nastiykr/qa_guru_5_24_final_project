@@ -5,6 +5,7 @@ import customAnnotations.AllureFeatures;
 import customAnnotations.AutoMember;
 import customAnnotations.Component;
 import customAnnotations.JiraIssue;
+import customAnnotations.Layer;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
@@ -18,6 +19,7 @@ import tests.api.steps.GitHubApiSteps;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Layer("api")
 public class GitHubApiTests {
     public final static String BASE_URL = "https://api.github.com";
     public final static String USER = "";

@@ -5,6 +5,8 @@ import com.codeborne.selenide.Selenide;
 import customAnnotations.AutoMember;
 import customAnnotations.Component;
 import customAnnotations.JiraIssue;
+import customAnnotations.JiraIssues;
+import customAnnotations.Layer;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
@@ -19,6 +21,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.id;
 
+@Layer("web")
 public class GitHubUITests extends BaseTest {
 
     public final static String BASE_URL = "https://github.com";
@@ -28,7 +31,7 @@ public class GitHubUITests extends BaseTest {
     GitHubPage gitHubPage = new GitHubPage();
 
     @Test
-    @JiraIssue("QC5-5")
+    @JiraIssues({@JiraIssue("QC5-5")})
     @AllureId("3245")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
@@ -36,7 +39,7 @@ public class GitHubUITests extends BaseTest {
     @Feature("Поиск")
     @Tags({@Tag("critical"), @Tag("web")})
     @DisplayName("Поиск репозитория через поисковую строку")
-    void searchRepo() {
+      void searchRepo() {
         gitHubPage.openPage(BASE_URL)
                 .search(REPOSITORY);
     }
