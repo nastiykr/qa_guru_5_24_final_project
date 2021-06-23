@@ -8,11 +8,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static helpers.AttachmentHelper.attachAsText;
-import static helpers.AttachmentHelper.attachPageSource;
-import static helpers.AttachmentHelper.attachScreenshot;
-import static helpers.AttachmentHelper.attachVideo;
-import static helpers.AttachmentHelper.getConsoleLogs;
+import static helper.AttachmentHelper.attachAsText;
+import static helper.AttachmentHelper.attachPageSource;
+import static helper.AttachmentHelper.attachScreenshot;
+import static helper.AttachmentHelper.attachVideo;
+import static helper.AttachmentHelper.getConsoleLogs;
 
 public class BaseTest {
     @BeforeAll

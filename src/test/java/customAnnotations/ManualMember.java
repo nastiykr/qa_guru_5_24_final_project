@@ -15,7 +15,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD, ElementType.TYPE})
 @LabelAnnotation(name = "qa-manual")
 public @interface ManualMember {
-
     String value();
-
 }

@@ -4,6 +4,7 @@ import com.codeborne.selenide.Selenide;
 import customAnnotations.AllureFeatures;
 import customAnnotations.AutoMember;
 import customAnnotations.Component;
+import customAnnotations.JiraIssue;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
@@ -28,6 +29,7 @@ public class GitHubApiTests {
     GitHubApiSteps gitHubApiSteps = new GitHubApiSteps();
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3237")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
@@ -42,6 +44,7 @@ public class GitHubApiTests {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3238")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
@@ -57,6 +60,7 @@ public class GitHubApiTests {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3239")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
@@ -79,6 +83,7 @@ public class GitHubApiTests {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3240")
     @AllureFeatures.Issue
     @Tags({@Tag("api")})
@@ -88,6 +93,7 @@ public class GitHubApiTests {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3241")
     @AllureFeatures.Issue
     @Tags({@Tag("api")})
@@ -97,6 +103,7 @@ public class GitHubApiTests {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3242")
     @AllureFeatures.Issue
     @Tags({@Tag("api")})

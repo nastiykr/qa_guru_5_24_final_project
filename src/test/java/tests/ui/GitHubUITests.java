@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import customAnnotations.AutoMember;
 import customAnnotations.Component;
+import customAnnotations.JiraIssue;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
@@ -27,6 +28,7 @@ public class GitHubUITests extends BaseTest {
     GitHubPage gitHubPage = new GitHubPage();
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3245")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
@@ -40,6 +42,7 @@ public class GitHubUITests extends BaseTest {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3235")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
@@ -55,6 +58,7 @@ public class GitHubUITests extends BaseTest {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3236")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
@@ -73,6 +77,7 @@ public class GitHubUITests extends BaseTest {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3243")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
@@ -88,6 +93,7 @@ public class GitHubUITests extends BaseTest {
     }
 
     @Test
+    @JiraIssue("QC5-5")
     @AllureId("3244")
     @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
