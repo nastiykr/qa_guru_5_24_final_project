@@ -26,7 +26,7 @@ public class GitHubUITests extends BaseTest {
 
     public final static String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "nastiykr/qa_guru_5_5_allure_reports";
-    private final static String TAB = "Issue";
+    private final static String TAB = "Issues";
 
     GitHubPage gitHubPage = new GitHubPage();
 
