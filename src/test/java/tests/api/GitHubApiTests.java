@@ -7,6 +7,7 @@ import customAnnotations.Component;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -31,6 +32,7 @@ public class GitHubApiTests {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("API")
+    @Feature("Репозиторий")
     @Tags({@Tag("critical"), @Tag("api")})
     @DisplayName("Создание репозитория")
     void createdRepo() {
@@ -44,6 +46,7 @@ public class GitHubApiTests {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("API")
+    @Feature("Репозиторий")
     @Tags({@Tag("api")})
     @DisplayName("Изменение названия репозитория")
     void editNameRepo() {
@@ -58,6 +61,7 @@ public class GitHubApiTests {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("API")
+    @Feature("Поиск")
     @Tags({@Tag("critical"), @Tag("api")})
     @DisplayName("Поиск репозитория")
     void searchRepo() {
@@ -76,7 +80,7 @@ public class GitHubApiTests {
 
     @Test
     @AllureId("3240")
-    @AllureFeatures.Issues
+    @AllureFeatures.Issue
     @Tags({@Tag("api")})
     @DisplayName("Создание Issue")
     void createdIssue() {
@@ -85,7 +89,7 @@ public class GitHubApiTests {
 
     @Test
     @AllureId("3241")
-    @AllureFeatures.Issues
+    @AllureFeatures.Issue
     @Tags({@Tag("api")})
     @DisplayName("Редактирование Issue")
     void edittedIssue() {
@@ -94,7 +98,7 @@ public class GitHubApiTests {
 
     @Test
     @AllureId("3242")
-    @AllureFeatures.Issues
+    @AllureFeatures.Issue
     @Tags({@Tag("api")})
     @DisplayName("Блокировка Issue")
     void blockedIssue() {

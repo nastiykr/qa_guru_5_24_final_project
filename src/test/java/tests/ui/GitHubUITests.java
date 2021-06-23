@@ -6,6 +6,7 @@ import customAnnotations.AutoMember;
 import customAnnotations.Component;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -30,6 +31,7 @@ public class GitHubUITests extends BaseTest {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("UI")
+    @Feature("Поиск")
     @Tags({@Tag("critical"), @Tag("web")})
     @DisplayName("Поиск репозитория через поисковую строку")
     void searchRepo() {
@@ -42,6 +44,7 @@ public class GitHubUITests extends BaseTest {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("UI")
+    @Feature("Поиск")
     @Tags({@Tag("web")})
     @DisplayName("Поиск раздела Issue в репозитории")
     void searchIssueTabTest() {
@@ -56,6 +59,7 @@ public class GitHubUITests extends BaseTest {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("UI")
+    @Feature("Авторизация")
     @Tags({@Tag("web")})
     @DisplayName("Авторизация пользователя с неверным паролем")
     void authorizationUserWithNotRightPassword() {
@@ -73,6 +77,7 @@ public class GitHubUITests extends BaseTest {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("UI")
+    @Feature("Разделы на сайте")
     @Tags({@Tag("web")})
     @DisplayName("Открытие вкладки features")
     void openTabFeature() {
@@ -87,6 +92,7 @@ public class GitHubUITests extends BaseTest {
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
     @Component("UI")
+    @Feature("Разделы на сайте")
     @Tags({@Tag("web")})
     @DisplayName("Открытие страницы shop")
     void openShopPage() {

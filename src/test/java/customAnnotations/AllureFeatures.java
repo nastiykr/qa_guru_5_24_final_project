@@ -15,11 +15,11 @@ public  @interface  AllureFeatures {
     @Inherited
     @Retention(RetentionPolicy.RUNTIME)
     @Target({ElementType.METHOD, ElementType.TYPE})
-    @Feature("Issues")
+    @Feature("Issue")
     @ManualMember("user1")
     @AutoMember("nastiykr")
     @Component("API")
-    @interface Issues {
+    @interface Issue {
 
     }
 
