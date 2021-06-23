@@ -28,7 +28,7 @@ public class GitHubUITests extends BaseTest {
 
     @Test
     @AllureId("3245")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("UI")
     @Feature("Поиск")
@@ -41,7 +41,7 @@ public class GitHubUITests extends BaseTest {
 
     @Test
     @AllureId("3235")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("UI")
     @Feature("Поиск")
@@ -56,7 +56,7 @@ public class GitHubUITests extends BaseTest {
 
     @Test
     @AllureId("3236")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("UI")
     @Feature("Авторизация")
@@ -74,7 +74,7 @@ public class GitHubUITests extends BaseTest {
 
     @Test
     @AllureId("3243")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("UI")
     @Feature("Разделы на сайте")
@@ -89,7 +89,7 @@ public class GitHubUITests extends BaseTest {
 
     @Test
     @AllureId("3244")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("UI")
     @Feature("Разделы на сайте")

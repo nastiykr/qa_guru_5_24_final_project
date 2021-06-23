@@ -29,7 +29,7 @@ public class GitHubApiTests {
 
     @Test
     @AllureId("3237")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("API")
     @Feature("Репозиторий")
@@ -43,7 +43,7 @@ public class GitHubApiTests {
 
     @Test
     @AllureId("3238")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("API")
     @Feature("Репозиторий")

@@ -28,7 +28,7 @@ public  @interface  AllureFeatures {
     @Retention(RetentionPolicy.RUNTIME)
     @Target({ElementType.METHOD, ElementType.TYPE})
     @Feature("PullRequests")
-    @ManualMember("nastiykr")
+    @ManualMember("c05-nasstasya")
     @AutoMember("nastiykr")
     @Component("API")
     @interface PullRequests {
