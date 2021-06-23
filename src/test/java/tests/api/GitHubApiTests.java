@@ -1,6 +1,7 @@
 package tests.api;
 
 import com.codeborne.selenide.Selenide;
+import config.application.App;
 import customAnnotations.AllureFeatures;
 import customAnnotations.AutoMember;
 import customAnnotations.Component;
@@ -8,27 +9,38 @@ import customAnnotations.JiraIssue;
 import customAnnotations.Layer;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
-import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import tests.api.model.Issue;
 import tests.api.model.Repo;
-import tests.api.steps.GitHubApiSteps;
+import tests.api.steps.GitHubApiIssueSteps;
+import tests.api.steps.GitHubApiRepoSteps;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Layer("api")
 public class GitHubApiTests {
     public final static String BASE_URL = "https://api.github.com";
-    public final static String USER = "";
-    public final static String PASSWORD = "";
-    public final static String TOKEN = "";
+    public final static String USER = App.config.getRemoteWebUser();
+    public final static String TOKEN = App.config.getRemoteWebToken();
+
+    GitHubApiRepoSteps repoSteps = new GitHubApiRepoSteps();
+    GitHubApiIssueSteps issueSteps = new GitHubApiIssueSteps();
 
     Repo repo = new Repo("my_repo", "some_description");
     Repo newRepo = new Repo("my_repo_edited", "some_some_description");
-    GitHubApiSteps gitHubApiSteps = new GitHubApiSteps();
+    Issue issue = new Issue("my_title_1","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
+
+
+
+
+    @Test
+    void qqw() {
+        repoSteps.deleteRepo(repo);
+    }
 
     @Test
     @JiraIssue("QC5-5")
@@ -40,9 +52,9 @@ public class GitHubApiTests {
     @Tags({@Tag("critical"), @Tag("api")})
     @DisplayName("Создание репозитория")
     void createdRepo() {
-        gitHubApiSteps.createRepo(repo);
-        gitHubApiSteps.checkExistsRepo(repo);
-        gitHubApiSteps.deleteRepo(repo);
+        repoSteps.createRepo(repo);
+        repoSteps.checkExistsRepo(repo);
+        repoSteps.deleteRepo(repo);
     }
 
     @Test
@@ -55,10 +67,10 @@ public class GitHubApiTests {
     @Tags({@Tag("api")})
     @DisplayName("Изменение названия репозитория")
     void editNameRepo() {
-        gitHubApiSteps.createRepo(repo);
-        gitHubApiSteps.editNameRepo(repo, newRepo);
+        repoSteps.createRepo(repo);
+        repoSteps.editNameRepo(repo, newRepo);
         Selenide.sleep(2000);
-        gitHubApiSteps.deleteRepo(newRepo);
+        repoSteps.deleteRepo(newRepo);
     }
 
     @Test
@@ -71,16 +83,16 @@ public class GitHubApiTests {
     @Tags({@Tag("critical"), @Tag("api")})
     @DisplayName("Поиск репозитория")
     void searchRepo() {
-        int countRepoBeforeCreate = gitHubApiSteps.searchRepo(repo);
+        int countRepoBeforeCreate = repoSteps.searchRepo(repo);
         assertEquals(0, countRepoBeforeCreate);
 
-        gitHubApiSteps.createRepo(repo);
+        repoSteps.createRepo(repo);
         Selenide.sleep(2000);
 
-        int countRepoAfterCreate = gitHubApiSteps.searchRepo(repo);
+        int countRepoAfterCreate = repoSteps.searchRepo(repo);
         assertEquals(1, countRepoAfterCreate);
 
-        gitHubApiSteps.deleteRepo(repo);
+        repoSteps.deleteRepo(repo);
 
     }
 

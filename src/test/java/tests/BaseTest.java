@@ -1,37 +1,37 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import config.Project;
+import helpers.AllureAttachments;
+import helpers.DriverSettings;
+import helpers.DriverUtils;
+import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static helper.AttachmentHelper.attachAsText;
-import static helper.AttachmentHelper.attachPageSource;
-import static helper.AttachmentHelper.attachScreenshot;
-import static helper.AttachmentHelper.attachVideo;
-import static helper.AttachmentHelper.getConsoleLogs;
-
+@ExtendWith({AllureJunit5.class})
 public class BaseTest {
     @BeforeAll
-    static void setup() {
-        Configuration.startMaximized = true;
-        addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.browserCapabilities = capabilities;
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+    static void setUp() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        DriverSettings.configure();
     }
 
     @AfterEach
-    void afterEach() {
-        attachScreenshot("Last screenshot");
-        attachPageSource();
-        attachAsText("Browser console logs", getConsoleLogs());
-        attachVideo();
-        closeWebDriver();
+    public void addAttachments() {
+        String sessionId = DriverUtils.getSessionId();
+
+        AllureAttachments.addScreenshotAs("Last screenshot");
+        AllureAttachments.addPageSource();
+        AllureAttachments.addBrowserConsoleLogs();
+
+        Selenide.closeWebDriver();
+
+        if (Project.isVideoOn()) {
+            AllureAttachments.addVideo(sessionId);
+        }
     }
 }

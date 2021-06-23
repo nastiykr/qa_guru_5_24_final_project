@@ -57,7 +57,7 @@ public class GitHubUITests extends BaseTest {
         gitHubPage.openPage(BASE_URL)
                 .search(REPOSITORY)
                 .goToRepository(REPOSITORY)
-                .checkData(TAB);
+                .checkOpenedIssue(TAB);
     }
 
     @Test
@@ -90,9 +90,8 @@ public class GitHubUITests extends BaseTest {
     @DisplayName("Открытие вкладки features")
     void openTabFeature() {
         gitHubPage.openPage(BASE_URL)
-                .search(REPOSITORY)
-                .goToRepository(REPOSITORY)
-                .checkData(TAB);
+                .clickOpenFeaturePage()
+                .checkOpenedFeaturePage();
     }
 
     @Test
@@ -106,8 +105,8 @@ public class GitHubUITests extends BaseTest {
     @DisplayName("Открытие страницы shop")
     void openShopPage() {
         gitHubPage.openPage(BASE_URL)
-                .search(REPOSITORY)
-                .goToRepository(REPOSITORY)
-                .checkData(TAB);
+                .clickOpenShopPage()
+                .clickButtonShop()
+                .checkOpenedShopPage();
     }
 }
