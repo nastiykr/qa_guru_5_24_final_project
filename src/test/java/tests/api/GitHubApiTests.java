@@ -1,7 +1,11 @@
 package tests.api;
 
 import com.codeborne.selenide.Selenide;
+import customAnnotations.AutoMember;
+import customAnnotations.ManualMember;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.api.model.Repo;
 import tests.api.steps.GitHubApiSteps;
@@ -26,7 +30,10 @@ public class GitHubApiTests {
     }
 
     @Test
-    @Description("Создание репозитория")
+    @AllureId("3237")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Создание репозитория")
     void createdRepo() {
         gitHubApiSteps.createRepo(repo);
         gitHubApiSteps.checkExistsRepo(repo);
@@ -34,7 +41,10 @@ public class GitHubApiTests {
     }
 
     @Test
-    @Description("Изменение названия репозитория")
+    @AllureId("3238")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Изменение названия репозитория")
     void editNameRepo() {
         gitHubApiSteps.createRepo(repo);
         gitHubApiSteps.editNameRepo(repo, newRepo);
@@ -43,7 +53,10 @@ public class GitHubApiTests {
     }
 
     @Test
-    @Description("Поиск репозитория")
+    @AllureId("3239")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Поиск репозитория")
     void searchRepo() {
         int countRepoBeforeCreate = gitHubApiSteps.searchRepo(repo);
         assertEquals(0, countRepoBeforeCreate);
@@ -55,6 +68,31 @@ public class GitHubApiTests {
         assertEquals(1, countRepoAfterCreate);
 
         gitHubApiSteps.deleteRepo(repo);
+
+    }
+
+    @Test
+    @AllureId("3240")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Создание Issue")
+    void createdIssue() {
+
+    }
+
+    @Test
+    @AllureId("3241")
+    @DisplayName("Редактирование Issue")
+    void edittedIssue() {
+
+    }
+
+    @Test
+    @AllureId("3242")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Блокировка Issue")
+    void blockedIssue() {
 
     }
 }

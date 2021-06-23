@@ -2,7 +2,10 @@ package tests.ui;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import io.qameta.allure.Description;
+import customAnnotations.AutoMember;
+import customAnnotations.ManualMember;
+import io.qameta.allure.AllureId;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.ui.pages.GitHubPage;
 import tests.BaseTest;
@@ -20,7 +23,20 @@ public class GitHubUITests extends BaseTest {
     GitHubPage gitHubPage = new GitHubPage();
 
     @Test
-    @Description("Поиск раздела Issue в репозитории")
+    @AllureId("3245")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Поиск репозитория через поисковую строку")
+    void searchRepo() {
+        gitHubPage.openPage(BASE_URL)
+                .search(REPOSITORY);
+    }
+
+    @Test
+    @AllureId("3235")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Поиск раздела Issue в репозитории")
     void searchIssueTabTest() {
         gitHubPage.openPage(BASE_URL)
                 .search(REPOSITORY)
@@ -29,7 +45,10 @@ public class GitHubUITests extends BaseTest {
     }
 
     @Test
-    @Description("Авторизация пользователя с неверным паролем")
+    @AllureId("3236")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Авторизация пользователя с неверным паролем")
     void authorizationUserWithNotRightPassword() {
         gitHubPage.openPage(BASE_URL);
         $(byText("Sign in")).click();
@@ -38,5 +57,29 @@ public class GitHubUITests extends BaseTest {
         $("[value='Sign in']").click();
         Selenide.sleep(100);
         $(byText("There have been several failed attempts to sign in from this account or IP address. Please wait a while and try again later.")).shouldBe(Condition.visible);
+    }
+
+    @Test
+    @AllureId("3243")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Открытие вкладки features")
+    void openTabFeature() {
+        gitHubPage.openPage(BASE_URL)
+                .search(REPOSITORY)
+                .goToRepository(REPOSITORY)
+                .checkData(TAB);
+    }
+
+    @Test
+    @AllureId("3244")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @DisplayName("Открытие страницы shop")
+    void openShopPage() {
+        gitHubPage.openPage(BASE_URL)
+                .search(REPOSITORY)
+                .goToRepository(REPOSITORY)
+                .checkData(TAB);
     }
 }
