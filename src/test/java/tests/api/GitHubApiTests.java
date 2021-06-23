@@ -2,6 +2,7 @@ package tests.api;
 
 import com.codeborne.selenide.Selenide;
 import customAnnotations.AutoMember;
+import customAnnotations.Component;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
@@ -33,6 +34,7 @@ public class GitHubApiTests {
     @AllureId("3237")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("API")
     @DisplayName("Создание репозитория")
     void createdRepo() {
         gitHubApiSteps.createRepo(repo);
@@ -44,6 +46,7 @@ public class GitHubApiTests {
     @AllureId("3238")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("API")
     @DisplayName("Изменение названия репозитория")
     void editNameRepo() {
         gitHubApiSteps.createRepo(repo);
@@ -56,6 +59,7 @@ public class GitHubApiTests {
     @AllureId("3239")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("API")
     @DisplayName("Поиск репозитория")
     void searchRepo() {
         int countRepoBeforeCreate = gitHubApiSteps.searchRepo(repo);
@@ -75,6 +79,7 @@ public class GitHubApiTests {
     @AllureId("3240")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("API")
     @DisplayName("Создание Issue")
     void createdIssue() {
 
@@ -82,6 +87,9 @@ public class GitHubApiTests {
 
     @Test
     @AllureId("3241")
+    @ManualMember("nastiykr")
+    @AutoMember("nastiykr")
+    @Component("API")
     @DisplayName("Редактирование Issue")
     void edittedIssue() {
 
@@ -91,6 +99,7 @@ public class GitHubApiTests {
     @AllureId("3242")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("API")
     @DisplayName("Блокировка Issue")
     void blockedIssue() {
 

@@ -3,6 +3,7 @@ package tests.ui;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import customAnnotations.AutoMember;
+import customAnnotations.Component;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
@@ -26,6 +27,7 @@ public class GitHubUITests extends BaseTest {
     @AllureId("3245")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("UI")
     @DisplayName("Поиск репозитория через поисковую строку")
     void searchRepo() {
         gitHubPage.openPage(BASE_URL)
@@ -36,6 +38,7 @@ public class GitHubUITests extends BaseTest {
     @AllureId("3235")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("UI")
     @DisplayName("Поиск раздела Issue в репозитории")
     void searchIssueTabTest() {
         gitHubPage.openPage(BASE_URL)
@@ -48,6 +51,7 @@ public class GitHubUITests extends BaseTest {
     @AllureId("3236")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("UI")
     @DisplayName("Авторизация пользователя с неверным паролем")
     void authorizationUserWithNotRightPassword() {
         gitHubPage.openPage(BASE_URL);
@@ -63,6 +67,7 @@ public class GitHubUITests extends BaseTest {
     @AllureId("3243")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("UI")
     @DisplayName("Открытие вкладки features")
     void openTabFeature() {
         gitHubPage.openPage(BASE_URL)
@@ -75,6 +80,7 @@ public class GitHubUITests extends BaseTest {
     @AllureId("3244")
     @ManualMember("nastiykr")
     @AutoMember("nastiykr")
+    @Component("UI")
     @DisplayName("Открытие страницы shop")
     void openShopPage() {
         gitHubPage.openPage(BASE_URL)
