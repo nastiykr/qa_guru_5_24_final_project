@@ -2,6 +2,7 @@
 # Автотесты http://github.com
 
 ## Реализованы проверки:
+в реализации использованы разные подходы проектирования, позволяющие достичь разного представления в отчетах
 ### UI
 - [X] - 1
 - [X] - 2
@@ -61,13 +62,15 @@ IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestO
 
 ### Запуск в Jenkins
 
-### Отчёт Allure
+### Запуск на Selenoid
+
+### Отчёт в Allure Report
 ![Allure](src/test/resources/files/Allure.png)
 
 ### Хранение тест-кейсов в Allure TestOps
 ![Allure](src/test/resources/files/Allure.png)
 
-### Привязка к Jira
+### Интерграция с Jira
 ![Jira](src/test/resources/files/Jira.png)
 
 ### Уведомления в Telegram
