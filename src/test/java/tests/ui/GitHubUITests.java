@@ -87,11 +87,11 @@ public class GitHubUITests extends BaseTest {
     @Component("UI")
     @Feature("Разделы на сайте")
     @Tags({@Tag("web")})
-    @DisplayName("Открытие вкладки features")
+    @DisplayName("Открытие вкладки team")
     void openTabFeature() {
         gitHubPage.openPage(BASE_URL)
-                .clickOpenFeaturePage()
-                .checkOpenedFeaturePage();
+                .clickOpenTeamPage()
+                .checkOpenedTeamPage();
     }
 
     @Test

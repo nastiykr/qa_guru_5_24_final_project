@@ -23,23 +23,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Layer("api")
 public class GitHubApiTests {
+    GitHubApiRepoSteps repoSteps = new GitHubApiRepoSteps();
+    GitHubApiIssueSteps issueSteps = new GitHubApiIssueSteps();
+
     public final static String BASE_URL = "https://api.github.com";
     public final static String USER = App.config.getRemoteWebUser();
     public final static String TOKEN = App.config.getRemoteWebToken();
 
-    GitHubApiRepoSteps repoSteps = new GitHubApiRepoSteps();
-    GitHubApiIssueSteps issueSteps = new GitHubApiIssueSteps();
-
-    Repo repo = new Repo("my_repo", "some_description");
-    Repo newRepo = new Repo("my_repo_edited", "some_some_description");
-    Issue issue = new Issue("my_title_1","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
-
-
-
-
     @Test
-    void qqw() {
-        repoSteps.deleteRepo(repo);
+    void deleteTrash() {
+       //Repo repo4 = new Repo("my_repo4", "some_description");
+       //repoSteps.deleteRepo(repo4);
     }
 
     @Test
@@ -52,9 +46,11 @@ public class GitHubApiTests {
     @Tags({@Tag("critical"), @Tag("api")})
     @DisplayName("Создание репозитория")
     void createdRepo() {
-        repoSteps.createRepo(repo);
-        repoSteps.checkExistsRepo(repo);
-        repoSteps.deleteRepo(repo);
+        Repo repo1 = new Repo("my_repo1", "some_description");
+
+        repoSteps.createRepo(repo1);
+        repoSteps.checkExistsRepo(repo1);
+        repoSteps.deleteRepo(repo1);
     }
 
     @Test
@@ -67,8 +63,11 @@ public class GitHubApiTests {
     @Tags({@Tag("api")})
     @DisplayName("Изменение названия репозитория")
     void editNameRepo() {
-        repoSteps.createRepo(repo);
-        repoSteps.editNameRepo(repo, newRepo);
+        Repo repo2 = new Repo("my_repo2", "some_description");
+        Repo newRepo = new Repo("my_repo_edited", "some_some_description");
+
+        repoSteps.createRepo(repo2);
+        repoSteps.editNameRepo(repo2, newRepo);
         Selenide.sleep(2000);
         repoSteps.deleteRepo(newRepo);
     }
@@ -83,17 +82,18 @@ public class GitHubApiTests {
     @Tags({@Tag("critical"), @Tag("api")})
     @DisplayName("Поиск репозитория")
     void searchRepo() {
-        int countRepoBeforeCreate = repoSteps.searchRepo(repo);
+        Repo repo3 = new Repo("my_repo3", "some_description");
+
+        int countRepoBeforeCreate = repoSteps.searchRepo(repo3);
         assertEquals(0, countRepoBeforeCreate);
 
-        repoSteps.createRepo(repo);
+        repoSteps.createRepo(repo3);
         Selenide.sleep(2000);
 
-        int countRepoAfterCreate = repoSteps.searchRepo(repo);
+        int countRepoAfterCreate = repoSteps.searchRepo(repo3);
         assertEquals(1, countRepoAfterCreate);
 
-        repoSteps.deleteRepo(repo);
-
+        repoSteps.deleteRepo(repo3);
     }
 
     @Test
@@ -103,7 +103,13 @@ public class GitHubApiTests {
     @Tags({@Tag("api")})
     @DisplayName("Создание Issue")
     void createdIssue() {
+        Repo repo4 = new Repo("my_repo4", "some_description");
+        Issue issue1 = new Issue("My issue 1","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
 
+        repoSteps.createRepo(repo4);
+        issueSteps.createIssue(repo4, issue1)
+                .checkExistsIssue(repo4, issue1);
+        repoSteps.deleteRepo(repo4);
     }
 
     @Test
@@ -112,8 +118,15 @@ public class GitHubApiTests {
     @AllureFeatures.Issue
     @Tags({@Tag("api")})
     @DisplayName("Редактирование Issue")
-    void edittedIssue() {
+    void editedIssue() {
+        Repo repo5 = new Repo("my_repo5", "some_description");
+        Issue issue2 = new Issue("My issue 2","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
+        Issue newIssue = new Issue("My issue edited","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
 
+        repoSteps.createRepo(repo5);
+        issueSteps.createIssue(repo5, issue2)
+                .editNameIssue(repo5, issue2, newIssue);
+        repoSteps.deleteRepo(repo5);
     }
 
     @Test
@@ -123,6 +136,12 @@ public class GitHubApiTests {
     @Tags({@Tag("api")})
     @DisplayName("Блокировка Issue")
     void blockedIssue() {
+        Repo repo6 = new Repo("my_repo6", "some_description");
+        Issue issue3 = new Issue("My issue 3","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
 
+        repoSteps.createRepo(repo6);
+        issueSteps.createIssue(repo6, issue3)
+                .lockIssue(repo6);
+        repoSteps.deleteRepo(repo6);
     }
 }

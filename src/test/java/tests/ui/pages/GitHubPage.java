@@ -17,15 +17,12 @@ public class GitHubPage {
         return this;
     }
 
-    public GitHubPage clickOpenFeaturePage() {
-        Selenide.sleep(5000);
-        $(".HeaderMenu-summary", 0).click();
-        $(".py-2").shouldHave(text("Features")).click();
+    public GitHubPage clickOpenTeamPage() {
+        $(".HeaderMenu-link", 1).click();
        return this;
     }
 
     public GitHubPage clickOpenShopPage() {
-        Selenide.sleep(5000);
         $(byText("Shop")).click();
         return this;
     }
@@ -47,8 +44,8 @@ public class GitHubPage {
         return this;
     }
 
-    public GitHubPage checkOpenedFeaturePage() {
-        $(".h1-mktg").shouldHave(text("The tools you need to build what you want."));
+    public GitHubPage checkOpenedTeamPage() {
+        $(".h1-mktg").shouldHave(text("Build like the best teams on the planet"));
         return this;
     }
 

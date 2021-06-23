@@ -11,6 +11,18 @@ public class Issue {
     public String[] labels;
     public String[] assignees;
 
+    public String getTitle() {
+        return title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public boolean isLocked() {
+        return locked;
+    }
+
     public Issue(String title, String body, String milestone, boolean locked, String[] labels, String[] assignees) {
         this.title = title;
         this.body = body;
