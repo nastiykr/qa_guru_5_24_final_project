@@ -76,10 +76,10 @@ gradle clean
 ![Allure](src/test/resources/files/AllureReport.png)
 
 ### Хранение тест-кейсов в Allure TestOps
-![Allure](src/test/resources/files/AllureTestOps_1.png)
 ![Allure](src/test/resources/files/AllureTestOps_3.png)
 ![Allure](src/test/resources/files/AllureTestOps_4.png)
 ![Allure](src/test/resources/files/AllureTestOps_5.png)
+![Allure](src/test/resources/files/AllureTestOps_1.png)
 
 ### Интерграция с Jira
 ![Jira](src/test/resources/files/Jira.png)
