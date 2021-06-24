@@ -61,7 +61,7 @@ IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestO
 - [X] - Блокировка Issue
 
 ### Команда для запуска из терминала
-локально должны быть заданы параметры в local.properies, app.properties
+Локально должны быть заданы параметры в local.properies, app.properties
 ```
 gradle clean
 ```
@@ -69,19 +69,26 @@ gradle clean
 ![Selenoid](src/test/resources/files/Selenoid.gif)
 
 ### Запуск в Jenkins
+Статистика по запускам
 ![Jenkins](src/test/resources/files/Jenkins_1.png)
+Указание параметров для запуска
 ![Jenkins](src/test/resources/files/Jenkins_2.png)
 
 ### Отчёт в Allure Report
 ![Allure](src/test/resources/files/AllureReport.png)
 
 ### Хранение тест-кейсов в Allure TestOps
+Ручные и автотесты
 ![Allure](src/test/resources/files/AllureTestOps_3.png)
+Дашборд
 ![Allure](src/test/resources/files/AllureTestOps_4.png)
+Ланчи
 ![Allure](src/test/resources/files/AllureTestOps_5.png)
+Результат запуска ланча
 ![Allure](src/test/resources/files/AllureTestOps_1.png)
 
 ### Интерграция с Jira
+Отображение тест-кейсов и ланча
 ![Jira](src/test/resources/files/Jira.png)
 
 ### Уведомления в Telegram
