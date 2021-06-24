@@ -89,7 +89,7 @@ public class GitHubUITests extends BaseTest {
     @DisplayName("Открытие вкладки team")
     void openTabFeature() {
         gitHubPage.openPage(BASE_URL)
-                .clickOpenTeamPage()
+                .clickTeamPage()
                 .checkOpenedTeamPage();
     }
 
@@ -104,7 +104,7 @@ public class GitHubUITests extends BaseTest {
     @DisplayName("Открытие страницы shop")
     void openShopPage() {
         gitHubPage.openPage(BASE_URL)
-                .clickOpenShopPage()
+                .clickShopPage()
                 .clickButtonShop()
                 .checkOpenedShopPage();
     }
