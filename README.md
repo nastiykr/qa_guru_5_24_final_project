@@ -66,10 +66,10 @@ IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestO
 gradle clean
 ```
 ### Видео о прохождении тестов
-![Selenoid|medium](src/test/resources/files/Selenoid.gif)
+![Selenoid|small](src/test/resources/files/Selenoid.gif)
 
 ### Запуск в Jenkins
-![Jenkins|medium](src/test/resources/files/Jenkins_1.png)
+![Jenkins|small](src/test/resources/files/Jenkins_1.png)
 ![Jenkins|medium](src/test/resources/files/Jenkins_2.png)
 
 ### Отчёт в Allure Report
