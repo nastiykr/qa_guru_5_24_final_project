@@ -1,6 +1,5 @@
 package tests.api.steps;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.json.JSONObject;
@@ -18,7 +17,7 @@ public class GitHubApiIssueSteps {
         prepareRequest()
                 .log().all()
                 .body(issue)
-                .post("/repos/" + USER +"/" + repo.getName() +"/issues")
+                .post("/repos/" + USER + "/" + repo.getName() + "/issues")
                 .then()
                 .log().all()
                 .statusCode(201);
@@ -29,13 +28,13 @@ public class GitHubApiIssueSteps {
     public GitHubApiIssueSteps checkExistsIssue(Repo repo, Issue issue) {
         prepareRequest()
                 .log().all()
-                .get("/repos/" + USER +"/" + repo.getName() +"/issues")
+                .get("/repos/" + USER + "/" + repo.getName() + "/issues")
                 .then()
                 .statusCode(200)
                 .log().all()
                 .extract()
                 .jsonPath()
-                .getString("title").equals(USER +"/issues/" + issue.getTitle());
+                .getString("title").equals(USER + "/issues/" + issue.getTitle());
         return this;
     }
 
@@ -44,13 +43,13 @@ public class GitHubApiIssueSteps {
         prepareRequest()
                 .log().all()
                 .body(new JSONObject().put(newIssue.getTitle(), newIssue.getBody()))
-                .patch("/repos/"+ USER + "/"+ repo.getName() +"/issues/1")
+                .patch("/repos/" + USER + "/" + repo.getName() + "/issues/1")
                 .then()
                 .log().all()
                 .statusCode(200)
                 .extract()
                 .jsonPath()
-                .getString("title").equals(USER +"/issues/" + issue.getTitle());
+                .getString("title").equals(USER + "/issues/" + issue.getTitle());
         return this;
     }
 
@@ -58,14 +57,14 @@ public class GitHubApiIssueSteps {
     public GitHubApiIssueSteps lockIssue(Repo repo) {
         prepareRequest()
                 .log().all()
-                .put("/repos/"+ USER + "/"+ repo.getName() +"/issues/1/lock")
+                .put("/repos/" + USER + "/" + repo.getName() + "/issues/1/lock")
                 .then()
                 .log().all()
                 .statusCode(204);
 
         Response response = prepareRequest()
                 .log().all()
-                .get("/repos/"+ USER + "/"+ repo.getName() +"/issues/1");
+                .get("/repos/" + USER + "/" + repo.getName() + "/issues/1");
 
         response.then().body("locked", equalTo(true));
         return this;

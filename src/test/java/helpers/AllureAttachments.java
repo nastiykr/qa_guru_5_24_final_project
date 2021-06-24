@@ -1,6 +1,5 @@
 package helpers;
 
-import static helpers.Logging.LOGGER;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 
@@ -10,6 +9,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 import static com.codeborne.selenide.Selenide.sleep;
+import static helpers.Logging.LOGGER;
 
 public class AllureAttachments {
 

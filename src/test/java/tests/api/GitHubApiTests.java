@@ -32,8 +32,8 @@ public class GitHubApiTests {
 
     @Test
     void deleteTrash() {
-       //Repo repo4 = new Repo("my_repo4", "some_description");
-       //repoSteps.deleteRepo(repo4);
+        //Repo repo4 = new Repo("my_repo4", "some_description");
+        //repoSteps.deleteRepo(repo4);
     }
 
     @Test
@@ -104,7 +104,7 @@ public class GitHubApiTests {
     @DisplayName("Создание Issue")
     void createdIssue() {
         Repo repo4 = new Repo("my_repo4", "some_description");
-        Issue issue1 = new Issue("My issue 1","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
+        Issue issue1 = new Issue("My issue 1", "my_body_1", null, new String[]{"a", "b", "c"}, new String[]{USER});
 
         repoSteps.createRepo(repo4);
         issueSteps.createIssue(repo4, issue1)
@@ -120,8 +120,8 @@ public class GitHubApiTests {
     @DisplayName("Редактирование Issue")
     void editedIssue() {
         Repo repo5 = new Repo("my_repo5", "some_description");
-        Issue issue2 = new Issue("My issue 2","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
-        Issue newIssue = new Issue("My issue edited","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
+        Issue issue2 = new Issue("My issue 2", "my_body_1", null, new String[]{"a", "b", "c"}, new String[]{USER});
+        Issue newIssue = new Issue("My issue edited", "my_body_1", null, new String[]{"a", "b", "c"}, new String[]{USER});
 
         repoSteps.createRepo(repo5);
         issueSteps.createIssue(repo5, issue2)
@@ -137,7 +137,7 @@ public class GitHubApiTests {
     @DisplayName("Блокировка Issue")
     void blockedIssue() {
         Repo repo6 = new Repo("my_repo6", "some_description");
-        Issue issue3 = new Issue("My issue 3","my_body_1",null, new String[]{"a","b","c"}, new String[]{USER});
+        Issue issue3 = new Issue("My issue 3", "my_body_1", null, new String[]{"a", "b", "c"}, new String[]{USER});
 
         repoSteps.createRepo(repo6);
         issueSteps.createIssue(repo6, issue3)

@@ -14,8 +14,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
-import tests.ui.pages.GitHubPage;
 import tests.BaseTest;
+import tests.ui.pages.GitHubPage;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -26,7 +26,6 @@ public class GitHubUITests extends BaseTest {
 
     public final static String BASE_URL = "https://github.com";
     private final static String REPOSITORY = "nastiykr/qa_guru_5_5_allure_reports";
-    private final static String TAB = "Issues";
 
     GitHubPage gitHubPage = new GitHubPage();
 
@@ -39,7 +38,7 @@ public class GitHubUITests extends BaseTest {
     @Feature("Поиск")
     @Tags({@Tag("critical"), @Tag("web")})
     @DisplayName("Поиск репозитория через поисковую строку")
-      void searchRepo() {
+    void searchRepo() {
         gitHubPage.openPage(BASE_URL)
                 .search(REPOSITORY);
     }
@@ -57,7 +56,7 @@ public class GitHubUITests extends BaseTest {
         gitHubPage.openPage(BASE_URL)
                 .search(REPOSITORY)
                 .goToRepository(REPOSITORY)
-                .checkOpenedIssue(TAB);
+                .checkOpenedIssue();
     }
 
     @Test

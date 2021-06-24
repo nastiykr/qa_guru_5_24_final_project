@@ -1,6 +1,5 @@
 package tests.api.steps;
 
-import helpers.AllureRestAssuredFilter;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 

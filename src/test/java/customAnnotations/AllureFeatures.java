@@ -1,7 +1,6 @@
 package customAnnotations;
 
 import io.qameta.allure.Feature;
-import io.qameta.allure.LabelAnnotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -10,7 +9,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-public  @interface  AllureFeatures {
+public @interface AllureFeatures {
     @Documented
     @Inherited
     @Retention(RetentionPolicy.RUNTIME)
