@@ -23,7 +23,7 @@ import tests.api.steps.GitHubApiRepoSteps;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Layer("api")
-public class GitHubApiTests extends BaseAPITest {
+public class GitHubApiTests {
     GitHubApiRepoSteps repoSteps = new GitHubApiRepoSteps();
     GitHubApiIssueSteps issueSteps = new GitHubApiIssueSteps();
 
