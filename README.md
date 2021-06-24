@@ -66,19 +66,25 @@ IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestO
 gradle clean
 ```
 ### Видео о прохождении тестов
+![Selenoid](src/test/resources/files/Selenoid.gif)
 
 ### Запуск в Jenkins
-
-### Запуск на Selenoid
+![Jenkins](src/test/resources/files/Jenkins_1.png)
+![Jenkins](src/test/resources/files/Jenkins_2.png)
 
 ### Отчёт в Allure Report
-![Allure](src/test/resources/files/Allure.png)
+![Allure](src/test/resources/files/AllureReport_1.png)
+![Allure](src/test/resources/files/AllureReport_2.png)
 
 ### Хранение тест-кейсов в Allure TestOps
-![Allure](src/test/resources/files/Allure.png)
+![Allure](src/test/resources/files/AllureTestOps_1.png)
+![Allure](src/test/resources/files/AllureTestOps_2.png)
+![Allure](src/test/resources/files/AllureTestOps_3.png)
+![Allure](src/test/resources/files/AllureTestOps_4.png)
+![Allure](src/test/resources/files/AllureTestOps_5.png)
 
 ### Интерграция с Jira
 ![Jira](src/test/resources/files/Jira.png)
 
 ### Уведомления в Telegram
-![Telegram](src/test/resources/files/Telegram_notify.png)
+![Telegram](src/test/resources/files/Telegram.png)
