@@ -15,6 +15,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
+import tests.BaseTest;
 import tests.api.model.Issue;
 import tests.api.model.Repo;
 import tests.api.steps.GitHubApiIssueSteps;
@@ -23,7 +24,7 @@ import tests.api.steps.GitHubApiRepoSteps;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Layer("api")
-public class GitHubApiTests {
+public class GitHubApiTests extends BaseTest {
     GitHubApiRepoSteps repoSteps = new GitHubApiRepoSteps();
     GitHubApiIssueSteps issueSteps = new GitHubApiIssueSteps();
 
