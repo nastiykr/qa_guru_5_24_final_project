@@ -10,6 +10,7 @@ import customAnnotations.Layer;
 import customAnnotations.ManualMember;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -31,9 +32,11 @@ public class GitHubApiTests {
     public final static String TOKEN = App.config.getRemoteWebToken();
 
     @Test
+    @Disabled
+    @DisplayName("Удаление репозитория")
     void deleteTrash() {
-        //Repo repo4 = new Repo("my_repo4", "some_description");
-        //repoSteps.deleteRepo(repo4);
+        Repo repo1 = new Repo("my_repo1", "some_description");
+        repoSteps.deleteRepo(repo1);
     }
 
     @Test
