@@ -65,6 +65,10 @@ IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestO
 ```
 gradle clean
 ```
+Для запуска в несколько потоков
+```
+gradle clean -Dthreads=5
+```
 ### Видео о прохождении тестов
 ![Selenoid](src/test/resources/files/Selenoid.gif)
 
