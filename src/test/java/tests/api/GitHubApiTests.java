@@ -83,7 +83,7 @@ public class GitHubApiTests {
     @Component("API")
     @Feature("Поиск")
     @Tags({@Tag("critical"), @Tag("api")})
-    @DisplayName("Поиск репозитория")
+    @DisplayName("Поиск репозитория до и после создания")
     void searchRepo() {
         Repo repo3 = new Repo("my_repo3", "some_description");
 
