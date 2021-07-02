@@ -8,7 +8,7 @@
     <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Java.svg" width="40" height="40"  alt="Java"/>
 </a>
 <a href="https://selenide.org/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Selenide.svg" width="40" height="40"  alt="Seleide"/>
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Selenide.svg" width="40" height="40"  alt="Selenide"/>
 </a>
 <a href="https://aerokube.com/selenoid/">
     <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
