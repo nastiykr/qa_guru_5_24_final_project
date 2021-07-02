@@ -1,47 +1,10 @@
 # qa_guru_5_24_final_project
 # Автотесты на http://github.com :woman_technologist:
 
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/>
-</a>
-<a href="https://www.java.com/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Java.svg" width="40" height="40"  alt="Java"/>
-</a>
-<a href="https://selenide.org/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Selenide.svg" width="40" height="40"  alt="Selenide"/>
-</a>
-<a href="https://aerokube.com/selenoid/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
-</a>
-<a href="https://gradle.org/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Gradle.svg" width="40" height="40"  alt="Gradle"/>
-</a>
-<a href="https://junit.org/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/>
-</a>
-<a href="http://allure.qatools.ru/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Allure_Report.svg" width="40" height="40"  alt="Allure SE"/>
-</a>
-<a href="https://qameta.io/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/AllureTestOps.svg" width="40" height="40"  alt="Allure EE"/>
-</a>
-<a href="https://github.com/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Github.svg" width="40" height="40"  alt="Github"/>
-</a>
-<a href="https://www.jenkins.io/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
-</a>
-<a href="https://rest-assured.io/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Rest-Assured.svg" width="40" height="40"  alt="ResrAssured"/>
-</a>
-<a href="https://telegram.org/">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Telegram.svg" width="40" height="40"  alt="Telegram"/>
-</a>
-<a href="https://www.atlassian.com/ru/software/jira">
-    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Jira.svg" width="40" height="40"  alt="Jira"/>
-</a>
+![Intelij_IDEA](src/test/resources/files/icons/Intelij_IDEA.png)![Java](src/test/resources/files/icons/Java.png)![Selenide](src/test/resources/files/icons/Selenide.png)![Selenoid](src/test/resources/files/icons/Selenoid.png)![Gradle](src/test/resources/files/icons/Gradle.png)![JUnit5](src/test/resources/files/icons/JUnit5.png)![Allure Report](src/test/resources/files/icons/Allure_Report.png)![AllureTestOps](src/test/resources/files/icons/AllureTestOps.png)![Github](src/test/resources/files/icons/Github.png)![Jenkins](src/test/resources/files/icons/Jenkins.png)![Rest-Assured](src/test/resources/files/icons/Rest-Assured.png)![Telegram](src/test/resources/files/icons/Telegram.png)![Jira](src/test/resources/files/icons/Jira.png)
 
-IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestOps, Github, Jenkins, Rest-Assured, Telegram (reports), Jira.
+IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure Report, Allure TestOps, Github, Jenkins, Rest-Assured,
+Telegram (reports), Jira.
 
 ## Реализованы проверки:
 В реализации использованы разные подходы проектирования, позволяющие достичь разного представления в отчетах
