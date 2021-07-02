@@ -2,43 +2,43 @@
 # Автотесты на http://github.com :woman_technologist:
 
 <a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/>
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40" height="40"  alt="Java"/>
+<a href="https://www.java.com/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Java.svg" width="40" height="40"  alt="Java"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" width="40" height="40"  alt="Seleide"/>
+<a href="https://selenide.org/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Selenide.svg" width="40" height="40"  alt="Seleide"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
+<a href="https://aerokube.com/selenoid/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Selenoid.svg" width="40" height="40"  alt="Selenoid"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" width="40" height="40"  alt="Gradle"/>
+<a href="https://gradle.org/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Gradle.svg" width="40" height="40"  alt="Gradle"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/>
+<a href="https://junit.org/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" width="40" height="40"  alt="Allure SE"/>
+<a href="http://allure.qatools.ru/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Allure_Report.svg" width="40" height="40"  alt="Allure SE"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40" height="40"  alt="Allure EE"/>
+<a href="https://qameta.io/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/AllureTestOps.svg" width="40" height="40"  alt="Allure EE"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40" height="40"  alt="Github"/>
+<a href="https://github.com/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Github.svg" width="40" height="40"  alt="Github"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
+<a href="https://www.jenkins.io/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Jenkins.svg" width="40" height="40"  alt="Jenkins"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Rest-Assured.svg" width="40" height="40"  alt="ResrAssured"/>
+<a href="https://rest-assured.io/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Rest-Assured.svg" width="40" height="40"  alt="ResrAssured"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40" height="40"  alt="Telegram"/>
+<a href="https://telegram.org/">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Telegram.svg" width="40" height="40"  alt="Telegram"/>
 </a>
-<a href="https://www.jetbrains.com/idea/">
-    <img src="https://starchenkov.pro/qa-guru/img/skills/Jira.svg" width="40" height="40"  alt="Jira"/>
+<a href="https://www.atlassian.com/ru/software/jira">
+    <img src="https://github.com/nastiykr/qa_guru_5_24_final_project/tree/master/src/test/resources/files/icons/Jira.svg" width="40" height="40"  alt="Jira"/>
 </a>
 
 IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure SE, Allure TestOps, Github, Jenkins, Rest-Assured, Telegram (reports), Jira.
